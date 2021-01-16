@@ -1,0 +1,170 @@
+:root {
+  --color-base: #4e4e4e;
+  --color-light: #e5e3e8;
+  --color-lighter: #fafafa;
+  --color-white: #ffffff;
+
+  --accent-base: #00cdac;
+  --accent-dark: #114243;
+
+  --font-family: "Roboto", sans-serif;
+  --font-bold: 700;
+  --font-regular: 400;
+  --font-light: 300;
+
+  --size-heading: 2.5rem;
+  --size-subheading: 1.3125rem;
+  --size-cardtitle: 1.125rem;
+  --size-pricevalue: 3rem;
+  --size-priceduration: 1.5625rem;
+  --size-description: 1rem;
+  --size-button: 0.875rem;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 100vh;
+  margin: 0 auto;
+
+  font-family: var(--font-family);
+  color: var(--color-base);
+  text-align: center;
+  background-color: var(--color-lighter);
+
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: var(--font-bold);
+  font-size: var(--size-heading);
+  color: var(--accent-base);
+  line-height: 1;
+  margin: 0;
+}
+
+.subheading {
+  font-size: var(--size-subheading);
+  margin: 0;
+}
+
+.plans {
+  display: flex;
+}
+
+.plan {
+  margin: 1.6rem 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.plan__heading {
+  font-size: var(--size-cardtitle);
+  text-transform: uppercase;
+}
+
+.plan__pricing {
+  font-size: var(--size-pricevalue);
+  font-weight: var(--font-bold);
+  color: var(--accent-base);
+  margin: 0;
+}
+
+.plan__pricing span {
+  display: block;
+  font-size: var(--size-priceduration);
+  font-weight: var(--font-regular);
+  margin: -1.5rem 0 0 0;
+}
+
+.plan__description {
+  font-size: var(--size-description);
+  margin: 2rem 0;
+}
+
+.plan__joinbtn {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: var(--font-bold);
+  padding: 0.375rem 1rem;
+  border-radius: 0.3rem;
+  font-size: var(--size-button);
+}
+
+.plan__background--white {
+  background-color: var(--color-white);
+  color: var(--accent-dark);
+}
+
+.plan__background--darkgrey {
+  background-color: var(--accent-dark);
+  color: var(--color-white);
+}
+
+.plan__background--grey {
+  background-color: var(--color-light);
+}
+
+.plan__background--blue {
+  background: linear-gradient(var(--accent-dark), var(--accent-base));
+  color: var(--color-white);
+}
+
+.plan__background--blue .plan__pricing {
+  color: var(--color-white);
+}
+
+.button_getintouch {
+  text-decoration: none;
+  background-color: var(--accent-base);
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-size: var(--size-button);
+  padding: 0.375rem 1rem;
+  margin-top: 0.4rem;
+  border-radius: 0.3rem;
+}
+
+@media screen and (max-width: 540px) {
+  body {
+    width: 80%;
+    height: auto;
+  }
+
+  .plans {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  body {
+    width: 90%;
+    height: auto;
+  }
+
+  .plans {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    width: 100%;
+    height: auto;
+  }
+
+  .plans {
+    display: block;
+  }
+}
