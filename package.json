@@ -1,0 +1,27 @@
+{
+  "name": "ui-components",
+  "version": "1.0.0",
+  "description": "Showcasing UI-Components | CSS Learning",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d components"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vasudeveloper001/ui-components.git"
+  },
+  "keywords": [
+    "ui-components",
+    "ui",
+    "css3"
+  ],
+  "author": "Saurabh Srivastava",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vasudeveloper001/ui-components/issues"
+  },
+  "homepage": "https://vasudeveloper001.github.io/ui-components",
+  "dependencies": {
+    "gh-pages": "^3.1.0"
+  }
+}
