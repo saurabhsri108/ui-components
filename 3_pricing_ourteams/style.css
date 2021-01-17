@@ -1,0 +1,245 @@
+:root {
+  --color-base: #4e4e4e;
+  --color-light: #e5e3e8;
+  --color-lighter: #fafafa;
+  --color-white: #ffffff;
+
+  --accent-base: #00a1ab;
+  --accent-dark: #3741a0;
+
+  --font-family: "Roboto", sans-serif;
+  --font-bold: 700;
+  --font-regular: 400;
+  --font-light: 300;
+
+  --size-heading: 2.5rem;
+  --size-subheading: 1.3125rem;
+  --size-cardtitle: 1.125rem;
+  --size-pricevalue: 3rem;
+  --size-priceduration: 1.5625rem;
+  --size-description: 1rem;
+  --size-button: 0.875rem;
+}
+
+/* Grand Reset */
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/* Design Styles */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+  font-family: var(--font-family);
+  color: var(--color-base);
+  text-align: center;
+
+  line-height: 1.6;
+}
+
+section {
+  padding: 2rem;
+  margin: 4rem;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: var(--font-bold);
+  font-size: var(--size-heading);
+  color: var(--accent-base);
+  line-height: 1;
+  margin: 0;
+}
+
+.subheading {
+  font-size: var(--size-subheading);
+  margin: 0;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.mr-1 {
+  margin-right: 1rem !important;
+}
+
+.ml-1 {
+  margin-left: 1rem !important;
+}
+/* Pricing Plans */
+
+.plans {
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+
+.plan {
+  margin: 1.6rem 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.plan__heading {
+  font-size: var(--size-cardtitle);
+  text-transform: uppercase;
+}
+
+.plan__pricing {
+  font-size: var(--size-pricevalue);
+  font-weight: var(--font-bold);
+  color: var(--accent-base);
+  margin: 0;
+}
+
+.plan__pricing span {
+  display: block;
+  font-size: var(--size-priceduration);
+  font-weight: var(--font-regular);
+  margin: -1.5rem 0 0 0;
+}
+
+.plan__description {
+  font-size: var(--size-description);
+  margin: 2rem 0;
+}
+
+.plan__joinbtn {
+  display: inline-block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: var(--font-bold);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.2rem;
+  font-size: var(--size-button);
+}
+
+.plan--blue .plan__joinbtn {
+  background-color: var(--color-white);
+  color: var(--color-base);
+}
+
+.plan--grey .plan__joinbtn {
+  background-color: var(--color-base);
+  color: var(--color-white);
+}
+
+.plan--grey {
+  background: linear-gradient(-45deg, var(--color-light), var(--color-lighter));
+}
+
+.plan--blue {
+  background: linear-gradient(-45deg, var(--accent-dark), var(--accent-base));
+  color: var(--color-white);
+}
+
+.plan--blue .plan__pricing {
+  color: var(--color-white);
+}
+
+.button_getintouch {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--accent-base);
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-size: var(--size-button);
+  padding: 0.75rem 1.5rem;
+  margin-top: 0.4rem;
+  border-radius: 0.2rem;
+}
+
+/* Our Teams */
+
+.team-section {
+  background: var(--color-lighter);
+}
+
+.teams {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.team {
+  display: flex;
+  flex: 1 1 45%;
+  border-radius: 1rem;
+  padding: 0.7rem;
+  margin: 1rem 1.2rem;
+}
+
+.team img {
+  border-radius: 0.4rem;
+}
+
+.team__title {
+  margin: 0;
+  line-height: 1;
+  letter-spacing: 0.1rem;
+}
+
+.team__position {
+  margin: 0.3rem;
+  font-size: 0.825rem;
+  line-height: 1;
+}
+
+.team__description {
+  margin: 0.5rem 0.825rem;
+  font-size: var(--size-description);
+}
+
+.plan--grey .team__title {
+  color: var(--accent-base);
+}
+
+/* Mobile Responsiveness */
+
+@media screen and (max-width: 540px) {
+  body {
+    width: 80%;
+    height: auto;
+  }
+
+  .plans {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  body {
+    width: 90%;
+    height: auto;
+  }
+
+  .plans {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  body {
+    width: 100%;
+    height: auto;
+  }
+
+  .plans {
+    display: block;
+  }
+}
